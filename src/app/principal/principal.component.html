@@ -1,0 +1,29 @@
+<div style="margin: 0 auto; width: 70%; text-align: center;">
+  <h1>Ingrese el producto a buscar:</h1>
+  
+  <input type="text" [(ngModel)]="producto">
+  <button (click)="buscarProducto()">Buscar Producto</button>
+  <div>
+      <div class="vertical-menu">
+          <a href="#" class="active">Todos</a>
+          <a href="#" *ngFor=""></a>
+
+        </div>
+  <div style="padding-top: 50px">
+    <table>
+      <tr>
+        <th>Nombre</th>
+        <th>Valor</th>
+        <th>Imagen</th>
+      </tr>
+      <tr *ngFor="let res of resultado.results; let i index" (click)="clickDetalle(i)" style="cursor: pointer;">
+        <td><h1>{{res.title}}</h1></td>
+        <td><h1>{{res.price}}</h1></td>
+        <td>
+          <img src="{{res.thumbnail}}" alt="imagen">
+        </td>
+      </tr>
+    </table>   
+  </div>
+</div>
+</div>
