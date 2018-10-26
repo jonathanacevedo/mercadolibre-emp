@@ -1,9 +1,34 @@
 .container{
     border-radius: 10px;
-    background-color: #004d9a; 
+    background-color: #FFFFFF;
     margin: 0 auto; width: 50%; 
     text-align: center; 
-    color: white;
+    color: #262626;
     padding: 20px;
+    border: 2px solid #778899;
+}
+
+.imagenProducto{
+    width: 50%;
+    height: 50%; 
+}
+
+h1{
+    font-size: 2rem;
+    color: #262626;
+}
+
+.button {
+    border: none;
+    color: white;
+    padding: 6px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2px 1px;
+    cursor: pointer;
+    background-color: #262626;
+    float:right;
 }
 

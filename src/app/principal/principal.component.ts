@@ -18,6 +18,8 @@ export class PrincipalComponent implements OnInit {
   public valor: string;
   public urlFoto: string;
 
+  public categorias: any = '';
+
   public resultado: any = '';
 
   constructor(public buscarService : BuscarService,
@@ -31,13 +33,13 @@ export class PrincipalComponent implements OnInit {
 
   buscarProducto() {
     this.buscarService.buscarProducto(this.producto).subscribe((data) => {
-      console.log(data);
       this.resultado = data;
     })
   }
 
   listarCategorias() {
     this.getCategorias.listarCategorias().subscribe((data) => {
+      this.categorias = data.categories;
       console.log(data.categories);
     }
   );
@@ -56,11 +58,12 @@ export class PrincipalComponent implements OnInit {
      };
 
      dialogConfig.data = {
-      titulo: item.title,
+       id: item
+      /*titulo: item.title,
       precio: item.price,
       condicion: item.attributes[0].value_name,
       imagen: item.thumbnail,
-      lugar: item.address.city_name
+      lugar: item.address.city_name*/
     };
 
     let dialogRef = this.dialog.open(VerDetalleComponent, dialogConfig);

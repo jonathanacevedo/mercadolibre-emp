@@ -1,11 +1,33 @@
+<div>
+    <button (click)="cerrarDialog()" class="button">Cerrar</button>
+
 <div class="container">
-    <button (click)="cerrarDialog()" style="float: right;">Cerrar</button>
+<h1>{{titulo}}</h1>
+<br>
+<img src="{{imagen}}" class="imagenProducto" alt="imagenItem">
+<img src="{{imagen2}}" class="imagenProducto" alt="imagenItem">
+<br>
 
-<h2>{{data.titulo}}</h2>
-<img src="{{data.imagen}}" alt="imagenItem">
+<!-- div detalle -->
+<div style="padding: 20px;"> 
+    <div><strong>Precio</strong>: {{precio}}</div>
+    <div><strong>Estado</strong>: 
+        <span *ngIf="estado=='used'">Usado</span>
+        <span *ngIf="estado=='new'">Nuevo</span>
+    </div>
+    <div><strong>MercadoPago</strong>:
+    <span *ngIf="mercadoPago">Si</span>
+    <span *ngIf="!mercadoPago">No</span>
+    <div><strong>Ciudad</strong>: {{ciudadEnvio}}</div>
+    <div><strong>Dirección</strong>: {{direccionEnvio}}</div>
+    <div><strong>Fecha de Inicio</strong>: {{fecha_inicio}}</div>
+    <div><strong>Fecha Fin</strong>: {{fecha_fin}}</div>
 
-<h2>{{data.precio}}</h2>
-<h2>{{data.condicion}}</h2>
-<h2>{{data.lugar}}</h2>
+</div>
 
+</div>
+<!-- 
+<div>{{data.precio}}</div>
+<div>{{data.condicion}}</div>
+<div>{{data.lugar}}</div> -->
 </div>
