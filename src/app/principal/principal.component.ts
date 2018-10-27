@@ -28,7 +28,6 @@ export class PrincipalComponent implements OnInit {
 
   ngOnInit() {
     this.listarCategorias();
-
   }
 
   buscarProducto() {
