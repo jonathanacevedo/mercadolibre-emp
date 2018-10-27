@@ -1,48 +1,37 @@
-<table>
-<tr>
-  <td style="width: 100%">
-<div *ngFor="let categoria of categorias">
-  {{categoria.name}}
-</div>
-  </td>
-  <td style="width: 100%">
+<div style="margin: 0 auto; width: 70%; text-align: center;">
+  <div>
+    <div style="padding: 20px;">
+      <input type="text" text-aling="center" placeholder="Producto" [(ngModel)]="producto">
+    </div>
+    <button class="button" (click)="buscarProducto()">Buscar</button>
     <div>
-      <div style="padding: 20px;">
-        <input type="text" text-aling="center" placeholder="Producto" [(ngModel)]="producto">
-        </div>
-        <button class="button" (click)="buscarProducto()">Buscar</button>
-        <div>
-        <div style="padding-top: 50px">
-          <table class="table">
-            <thead class="thead-dark">
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">Imagen</th>
-                <th scope="col">Titulo</th>
-                <th scope="col">Valor</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr *ngFor="let res of resultado.results; let i index" (click)="clickDetalle(i.id)" style="cursor: pointer;">
-                <td>1
-                </td>
-                <td>
-                  <img src="{{res.thumbnail}}" alt="imagen">
-                </td>
-                <td>{{res.title}}</td>
-                <td>{{res.price}}</td>
-              </tr>
-            </tbody>
-          </table>
-      
-        </div>
+      <div style="padding-top: 50px">
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Imagen</th>
+              <th scope="col">Titulo</th>
+              <th scope="col">Valor</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let res of resultado.results; let i index" (click)="clickDetalle(i.id)" style="cursor: pointer;">
+              <td>1
+              </td>
+              <td>
+                <img src="{{res.thumbnail}}" alt="imagen">
+              </td>
+              <td>{{res.title}}</td>
+              <td>{{res.price}}</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
-  </td>
-</tr>
+  </div>
+</div>
 
-
-</table>
 
 
 <!-- <div style="margin: 0 auto; width: 70%; text-align: center;">
